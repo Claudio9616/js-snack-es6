@@ -30,3 +30,25 @@ const guestsList = guests.map((guest, index) => {
 })
 // 4
 console.log(guestsList)
+
+// Id|Name|Grades
+// 213|Marco della Rovere|78
+// 110|Paola Cortellessa|96
+// 250|Andrea Mantegna|48
+// 145|Gaia Borromini|74
+// 196|Luigi Grimaldello|68
+// 102|Piero della Francesca|50
+// 120|Francesca da Polenta|84
+
+const students = [
+    {id:'213', name: 'Marco della Rovere', vote:'78'},
+    {id:'110', name: 'Paola Cortellessa', vote:'96'},
+    {id:'250', name: 'Andrea Mantegna', vote:'48'},
+    {id:'145', name: 'Gaia Borromini', vote:'74'},
+    {id:'196', name: 'Luigi Grimaldello', vote:'68'},
+    {id:'102', name: 'Piero della Francesca', vote:'50'},
+    {id:'120', name: 'Francesca da Polenta', vote:'84'}
+]
+const over70Votes = students.filter(({vote}) => vote >= 70)
+const over120Id = students.filter(({id}) => id >= 120)
+console.log(over70Votes, over120Id)
