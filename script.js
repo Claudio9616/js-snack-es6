@@ -1,4 +1,4 @@
-const tableName = 'Tavolo Vip';
+;
 
 const guests = [
   'Brad Pitt',
@@ -12,11 +12,14 @@ const guests = [
   'Amal Clooney',
   'Maneskin'
 ];
-const guestsList = guests.map((guest, i) => {
+const guestsList = guests.map((guest, index) => {
+    let guestsName = guest
+    let place = index
+    const tableName = 'Tavolo Vip' 
     return {
-        nameTable: 'tableName',
-        guestName: 'guests',
-        place: '[i]'
+        tableName: tableName,
+        guestsName: guestsName,
+        place: place
     }
 })
 console.log(guestsList)
