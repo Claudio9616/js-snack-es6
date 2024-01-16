@@ -12,7 +12,11 @@ const guests = [
   'Amal Clooney',
   'Maneskin'
 ];
-const guestsList = guests.map(guest => {
-    return guest
+const guestsList = guests.map((guest, i) => {
+    return {
+        nameTable: 'tableName',
+        guestName: 'guests',
+        place: '[i]'
+    }
 })
 console.log(guestsList)
