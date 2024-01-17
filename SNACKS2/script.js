@@ -1,37 +1,3 @@
-// SNACKS1
-// 1 creo una variabile per il nome del tavolo
-// 2 creo un'array con il nome degli invitati
-// 3 uso il metodo map per creare una lista di array di oggetti, aggiungendo
-// il nome del tavolo e il numero del posto
-// 4 stampo in console
-
-// 1
-const tableName = 'Tavolo Vip'
-// 2
-const guests = [
-  'Brad Pitt',
-  'Johnny Depp',
-  'Lady Gaga',
-  'Cristiano Ronaldo',
-  'Georgina Rodriguez',
-  'Chiara Ferragni',
-  'Fedez',
-  'George Clooney',
-  'Amal Clooney',
-  'Maneskin'
-]
-// 3
-const guestsList = guests.map((guest, index) => {     
-    return {
-        tableName: tableName,
-        guestsName: guest,
-        place: index + 1
-    }
-})
-// 4
-console.log(guestsList)
-
-
 // SNACKS2
 // 1 creo un'array di oggetti contenenti i valori di ID, NOME e VOTI
 // 2 creo una lista solo con gli studenti che hanno un voto superiore a 70
@@ -61,14 +27,3 @@ const over120Id = students.filter(student => {
 const names = students.map(({name}) => name.toUpperCase())
 // 5
 console.log(over70Votes, over120Id, names)
-
-// Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: name e peso.
- 
-bicycles = [
-    {name: 'cosentino', weight: 10},
-    {name: 'lombardo', weight: 20},
-    {name: 'bianchi', weight: 30},
-    {name: 'rossi', weight: 5}
-]
-const minWeight = bicycles.find(({weight}) => weight === 5)
-console.log(minWeight)
