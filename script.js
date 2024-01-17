@@ -25,7 +25,7 @@ const guestsList = guests.map((guest, index) => {
     return {
         tableName: tableName,
         guestsName: guest,
-        place: ++index
+        place: index + 1
     }
 })
 // 4
