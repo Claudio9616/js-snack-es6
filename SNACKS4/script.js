@@ -17,4 +17,4 @@ premierLeague.forEach(clubs => {
     console.log('randomPoints: ', randomPoints)
     console.log('randomFouls: ', randomFouls)
 })
-const newPremierLeague = premierLeague.filter()
+const newPremierLeague = premierLeague.map()
