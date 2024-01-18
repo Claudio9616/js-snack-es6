@@ -1,7 +1,10 @@
 // snacks 4
-// Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
-// Generare numeri random al posto degli 0 nelle proprietà punti fatti e falli subiti.
-// Infine, usando il destructuring, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console
+// 1 creo un'array di oggetti 
+// 2 creo un ciclo per girare sulla suddetta array e randomizzare tot di volte dei numeri random
+// 3 creo una nuova array solamente con col nome e i falli subiti
+// 4 stampo in console
+
+// 1
 const premierLeague = [
     {name: 'Chelsea', points: 0, fouls: 0},
     {name: 'Arsenal', points: 0, fouls: 0},
@@ -9,28 +12,17 @@ const premierLeague = [
     {name: 'Manchester United', points: 0, fouls: 0},
     {name: 'Liverpool', points: 0, fouls: 0}   
 ]
-let randomPoints;
-let randomFouls;
-const newPremierLeague = premierLeague.map(({name}) => {
-    return name
+// 2
+premierLeague.forEach(clubsRandom => {
+    clubsRandom.points = Math.floor(Math.random() * 100) + 1
+    clubsRandom.fouls = Math.floor(Math.random() * 100) + 1
 })
-console.log(newPremierLeague, 'primo map')
-
-
-
-newPremierLeague.forEach(clubsRandom => {
-    randomPoints = Math.floor(Math.random() * 100) + 1
-    randomFouls = Math.floor(Math.random() * 100) + 1
-    console.log('randomPoints: ', randomPoints)
-    console.log('randomFouls: ', randomFouls)
-    newPremierLeague.push(randomFouls)
-})
-console.log(newPremierLeague, 'secondo')
-
-
-const finalPremierLeague = newPremierLeague.map(({name}) => {
+// 3
+const newPremierLeague = premierLeague.map(({name, fouls}) => {
     return {
-        name: name
+        name,
+        fouls
     }
 })
-console.log(finalPremierLeague)
+// 4
+console.log(newPremierLeague)
